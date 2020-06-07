@@ -30,6 +30,8 @@ Run this command in the application directory to run the test suite
 composer test
 ```
 
+Please note that I haven't tested the sources from SlimSkeleton because these are originated from Slim Skeleton project.
+
 ## Features
 
 ### Due Date Calculator
