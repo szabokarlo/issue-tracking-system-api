@@ -85,6 +85,34 @@ class DueDateTimeTest extends TestCase
                     DateTime::createFromFormat(DateTime::RFC3339, '2020-06-09T10:12:38+02:00')
                 ),
             ],
+            [
+                'dateTime'              => DateTime::createFromFormat(DateTime::RFC3339, '2020-06-04T16:12:38+02:00'),
+                'turnaroundTimeInHours' => 1,
+                'expectedDueDateTime'   => DueDateTime::create(
+                    DateTime::createFromFormat(DateTime::RFC3339, '2020-06-05T9:12:38+02:00')
+                ),
+            ],
+            [
+                'dateTime'              => DateTime::createFromFormat(DateTime::RFC3339, '2020-06-05T16:12:38+02:00'),
+                'turnaroundTimeInHours' => 1,
+                'expectedDueDateTime'   => DueDateTime::create(
+                    DateTime::createFromFormat(DateTime::RFC3339, '2020-06-08T9:12:38+02:00')
+                ),
+            ],
+            [
+                'dateTime'              => DateTime::createFromFormat(DateTime::RFC3339, '2020-06-05T15:59:59+02:00'),
+                'turnaroundTimeInHours' => 1,
+                'expectedDueDateTime'   => DueDateTime::create(
+                    DateTime::createFromFormat(DateTime::RFC3339, '2020-06-05T16:59:59+02:00')
+                ),
+            ],
+            [
+                'dateTime'              => DateTime::createFromFormat(DateTime::RFC3339, '2020-06-05T16:50:00+02:00'),
+                'turnaroundTimeInHours' => 1,
+                'expectedDueDateTime'   => DueDateTime::create(
+                    DateTime::createFromFormat(DateTime::RFC3339, '2020-06-08T09:50:00+02:00')
+                ),
+            ],
         ];
     }
 }
