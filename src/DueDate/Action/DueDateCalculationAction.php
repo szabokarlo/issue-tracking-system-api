@@ -14,13 +14,13 @@ use Psr\Log\LoggerInterface;
 
 class DueDateCalculationAction extends Action
 {
-    protected DueDateTimeService $dueDateService;
+    protected DueDateTimeService $dueDateTimeService;
 
     public function __construct(LoggerInterface $logger, DueDateTimeService $dueDateService)
     {
         parent::__construct($logger);
 
-        $this->dueDateService = $dueDateService;
+        $this->dueDateTimeService = $dueDateService;
     }
     /**
      * {@inheritdoc}
@@ -36,7 +36,7 @@ class DueDateCalculationAction extends Action
 
         $input = new DueDateTimeInput($submitDate, $turnaroundTime);
 
-        $dueDate = $this->dueDateService->calculate($input);
+        $dueDate = $this->dueDateTimeService->calculate($input);
 
         $dueDateModel = new DueDateTimeModel($dueDate);
 

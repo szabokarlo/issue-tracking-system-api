@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\DueData\Model;
+namespace Tests\DueDate\Model;
 
 use App\DueDate\Domain\DueDateTime;
 use App\DueDate\Model\DueDateTimeModel;

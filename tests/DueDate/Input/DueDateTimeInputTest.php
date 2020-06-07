@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\DueData\Input;
+namespace Tests\DueDate\Input;
 
 use App\DueDate\Input\DueDateTimeInput;
 use DateTime;

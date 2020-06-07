@@ -14,7 +14,7 @@ class DueDateTime extends DateTime
     private const WORKING_HOUR_START = 9;
     private const WORKING_HOUR_END   = 17;
 
-    private static $workingDays = [1, 2, 3, 4, 5];
+    private static array $workingDays = [1, 2, 3, 4, 5];
 
     /**
      * @throws Exception
